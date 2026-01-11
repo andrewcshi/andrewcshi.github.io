@@ -3,10 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faArrowRightLong, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Project from "../components/Project"; // Import the Project component
+import ThemeToggle from "../components/ThemeToggle";
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className="container" style={{ position: "relative" }}>
       <header className="header">
         <div className="profile">
           <div className="profile-image">
@@ -18,8 +19,11 @@ export default function Home() {
               style={{ borderRadius: "8px" }}
             />
           </div>
-          <div className="profile-info" style={{ marginLeft: "4rem" }}>
-            <h1>Andrew Shi</h1>
+          <div className="profile-info" style={{ marginLeft: "4rem", position: "relative" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+              <h1 style={{ margin: 0 }}>Andrew Shi</h1>
+              <ThemeToggle />
+            </div>
             <p>CS @ Stanford</p>
             <div className="social-icons">
               <a href="https://www.linkedin.com/in/acshi/" target="_blank" rel="noopener noreferrer" style={{ marginRight: "1rem" }}>
