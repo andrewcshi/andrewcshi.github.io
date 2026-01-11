@@ -2,7 +2,7 @@ import React from 'react';
 
 interface ProjectProps {
   title: string;
-  description: string;
+  description: string | React.ReactNode;
   link?: string;
 }
 
